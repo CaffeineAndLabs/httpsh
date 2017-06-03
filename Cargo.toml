@@ -1,0 +1,12 @@
+[package]
+name = "httpsh"
+version = "0.1.0"
+authors = ["morsicus <morsi.morsicus@gmail.com>"]
+
+[dependencies]
+rocket = "0.2.8"
+rocket_codegen = "0.2.8"
+rocket_contrib = { version = "0.2.8", features = ["json"] }
+serde = "0.9"
+serde_json = "0.9"
+serde_derive = "0.9"
