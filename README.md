@@ -1,4 +1,4 @@
-# httpsh - Execute system command throw an API
+# httpsh - Execute system command through an API
 
 ## Run httpsh
 1. Clone this repo
