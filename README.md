@@ -17,3 +17,6 @@ curl http://localhost:8000/ping
 curl -H "Content-Type: application/json" -X POST -d '{"name": "ls"}' http://localhost:8000/cmd/exec
 ```
 
+```bash
+curl -H "Content-Type: application/json" -X POST -d '{"name": "ls", "args": ["-l", "-a"]}' http://localhost:8000/cmd/exec
+```
