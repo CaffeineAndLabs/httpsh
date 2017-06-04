@@ -14,6 +14,7 @@ use std::process::Command;
 #[derive(Serialize, Deserialize)]
 struct Cmd {
     name: String,
+    args: Vec<String>,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -38,6 +39,7 @@ fn cmd_exec(body: JSON<Cmd>) -> JSON<ResultCmd> {
 
     // Execute the command POSTed
     let output = Command::new(cmd.name)
+        .args(&cmd.args)
         .output()
         .expect("Failed to execute command");
 
