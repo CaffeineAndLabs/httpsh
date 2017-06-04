@@ -19,6 +19,7 @@ struct Cmd {
 #[derive(Serialize, Deserialize)]
 struct ResultCmd {
     stdout: String,
+    stderr: String,
     exit_status: i32,
 }
 
@@ -42,6 +43,7 @@ fn cmd_exec(body: JSON<Cmd>) -> JSON<ResultCmd> {
 
     let res = ResultCmd {
         stdout: String::from_utf8(output.stdout).unwrap(),
+        stderr: String::from_utf8(output.stderr).unwrap(),
         exit_status: output.status.code().unwrap(),
     };
 
